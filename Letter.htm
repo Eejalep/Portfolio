@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Eero Leppälehto">
+<head>
+  <title>Portfolio Page of Eero</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Spartan' rel='stylesheet'>
+</head>
+<style>
+body {
+    font-family: 'Spartan';font-size: 22px;
+}
+</style>
+<body>
+
+<div class="header">
+
+  <h1>Portfolio</h1>
+</div>
+<span onclick="decide()"><div  class="container" onclick="myFunction(this)">
+   <div class="bar1"></div>
+   <div class="bar2"></div>
+   <div class="bar3"></div>
+</div></span>
+
+
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+
+<div id="mySidenav" class="sidenav">
+  <a href="Home.htm">Home</a>
+  <a href="Letter.htm">Letter</a>
+  <a href="Video.htm">Video</a>
+</div>
+
+<div id="main" class="row">
+  <div class="leftcolumn"></div>
+  <div class="middlecolumn">
+    <div class="card" style="color:white;">
+      <h2>Motivation Letter</h2>
+      <div>
+        <p>I am applying for FullStack software development continuing training, spring 2021. I am Eero Leppälehto, I live in Raisio and I am 29 years old. I studied mathematics at the University of Turku. During my studies I have gained a good understanding and comprehension of algorithmic systems. I have taken an introductory course in Javascript previously.  Since I was little mathematics and information technology have been close to my heart. However, studying mathematics no longer seemed meaningful as employment opportunities for positions similar to education seemed weak. I am currently an unemployed job seeker. FullStack continuing education would be just what would help me move forward.</p>
+        <p>In web design, I am interested in different solutions in user interfaces; how different solutions can make the user experience as easy and pleasant as possible. For many customers, a company’s or organization’s website is the first point of contact and will be more and more in the future. Therefore, web design will play an increasingly important role. I also see my own future here.</p>
+        <p>Since my studies, I have worked in the construction industry. There I noticed an increase in digital systems on construction sites, e.g. electronic passport systems and electronic documentation have become commonplace. Many companies in the industry have indeed invested heavily in the use of new digital systems and mobile applications on construction sites. I would see that FullStack training would give me the needed skills to partake in this development and get a job in the construction industry, for example. Similar developments are taking place in other industries.</p>
+        <p>I am applying for FullStack training because I want to learn something new and gain skills that I can get employed quickly. I feel that I would have a lot to give in this digitalisation development. I included a work project in the portfolio , where I created a local website, which I created in two weeks by self-studying HTML and CSS. I hope this tells you about my skills, my ability to learn, and my desire to participate in this degree program.</p>
+        <p>As a person, I get along well with other people and work flexibly. I have a realistic idea of ​​my own strengths as well as areas for development and I am always happy to learn new things.</p>
+        <p>Best regards,</p>
+        <p>Eero Leppälehto</p>
+      </div>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="cardright" style="padding: 10px; text-align: center;">
+      <img src="IMG_0662 (3).JPG" alt="Portrait" style="width: 100%; height: 100%; border-size: 0px; border-style: none; border-color: black; border-radius:5px;">
+      <p style="color: white;">Eero Leppälehto</p>
+      <hr>
+      <p style="color: white;">Insert Text</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+</div>
+
+<script>
+var open = false;
+
+function decide(){
+  if(open == true){
+    closeNav();
+  }else{
+    openNav();
+  }
+}
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+document.getElementById("main").style.marginLeft = "0px";
+open = true;
+
+
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+document.getElementById("main").style.marginLeft = "0px";
+open = false;
+
+}
+</script>
+
+</body>
+</html>

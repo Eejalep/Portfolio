@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  background-image: url('wallpaper(05).jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  background-size: cover;
+  margin: 0px;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+       
+  background-image: url('wallpaper(06).jpg');
+  }
+}
+
+/* SIDENAV */
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 0px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  left: 0;
+  background-color: #1c1714; /* #111 */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+    }
+  .sidenav a {
+    font-size: 18px;
+    }
+}
+
+
+/* MENUBUTTON */
+.container {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+  background: #362c25; /* #635046 */
+  padding: 0px;
+  
+  width: 50px;
+  height: 40px;
+  
+  margin: auto;
+  border-style: solid;
+  border-width: 0px;
+  border-color: #3b3734;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff1e8; /* #faf3ed */
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/* HEADER */
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #0d0907;
+  margin: auto;
+  color: white;
+  text-align: center;
+  border-style: hidden hidden outset hidden;
+  border-width: 0px 0px 4px 0px;
+  
+  border-color: #241812;
+}
+.header h1{
+  margin: 0px;
+  padding: 10px 0px;
+}
+
+/* COLUMNS */
+.leftcolumn {
+  float: left;
+  width: 15%;
+  padding: 10px;
+}
+
+.middlecolumn {
+  float: left;
+  width: 55%;
+  padding: 10px;
+}
+
+.rightcolumn {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+
+.vleftcolumn {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.vmiddlecolumn {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.vrightcolumn {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .middlecolumn, .rightcolumn, .vmiddlecolumn, .vrightcolumn 
+  {
+       
+  
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* CARDS */
+.card {
+   background-color: rgba(33, 27, 23, 0.95); /* #211b17 */
+   border-radius: 6px;
+   padding: 20px;
+   margin-top: 20px;
+   border-style: none;
+   border-width: 0px;
+   border-color: #211b17;
+}
+.cardright {
+   background-color: rgba(33, 27, 23, 0.95);
+   border-radius: 6px;
+   padding: 20px;
+   margin-top: 20px;
+   border-style: none;
+   border-width: 0px;
+   border-color: #211b17;
+   position: fixed;
+   top: 72px;
+}
+
+@media screen and (max-width: 800px) {
+  .card, .cardright {
+  border-width: 0px;
+}
+}
+
+@media screen and (max-width: 800px) {
+  .cardright {
+  position: static;
+  top: 0px;
+}
+}
+
+/* FOOTER */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 241, 232, 0.8);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 55%;
+  margin-left: 15%;
+  margin-right: 30%;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* MENUPAGE STYLING */
+.menulinks {
+  height: 90vh;
+  text-align: center;
+}
+.menulinks a{
+  position: relative;
+  top: 50%;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.menulinks a:visited{
+  color: white;
+}
+.menulinks a:hover{
+  color: grey;
+}
+.menulinks p{
+  position: relative;
+  top: 50%;
+  display: inline;
+  font-size: 40px;
+}
